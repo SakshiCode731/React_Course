@@ -9,5 +9,39 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script >
+     let a = 1;
+     console.log(a);
+     console.log("from html script");
+    //  Numbers 
+    //  Objects
+    //  Booleans - true or false
+    //  String
+    //  undefined
+    //   null
+
+    "use strict";
+    let  b = 45;
+    b = 4554 + 4;
+    console.log(b);
+    function hello(){
+      console.log("Hello Sakshi");
+    }
+    let obja = {
+      r: 34,
+      m:45,
+      func: function myfunc(number){
+        console.log("The number is " + number); 
+
+      }
+    }
+
+    document.addEventListener("click", function click(){
+      console.log("Clicked");
+      let conf = confirm("Are you sure?");
+      console.log(conf);
+    })
+    </script>
+    <h1> Hello World  </h1>
   </body>
 </html>
