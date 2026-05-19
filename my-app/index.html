@@ -30,10 +30,11 @@
     let obja = {
       r: 34,
       m:45,
-      func: function myfunc(number){
-        console.log("The number is " + number); 
+      // func: function myfunc(number){
+      //   console.log("The number is " + number); 
 
-      }
+      // }
+    
     }
 
     document.addEventListener("click", function click(){
@@ -41,6 +42,30 @@
       let conf = confirm("Are you sure?");
       console.log(conf);
     })
+
+    // for (let index = 0; index < 5; index++) {
+    //   console.log(index);
+    // }
+
+    let arr = [1, 2, 3, 4, 5];
+    console.log(this);
+    //  function myfunc(number){
+    //     console.log("The number is " + this); 
+
+    //   }
+    let mobj = {
+      a:this,
+      myfunc:function (number){
+        console.log(this);
+      }
+      // console.log("The number is " + this);
+    }
+      mobj.myfunc();
+      console.log(mobj.a);
+      setTimeout(() => {
+        console.log("yayaaa")
+      }, 3000);
+      console.log("This will run before the timeout");
     </script>
     <h1> Hello World  </h1>
   </body>
