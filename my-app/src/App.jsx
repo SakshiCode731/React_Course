@@ -119,7 +119,7 @@ import './App.css'
 //   )
 // }
 
-let name = "<b>Sakshi</b>"
+// let name = "<b>Sakshi</b>"
 function App(){
   return (
     <>
