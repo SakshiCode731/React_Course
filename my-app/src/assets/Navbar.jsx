@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types'
 
 
-export default function Navbar(props) {
+function Navbar(props) {
   return (
   <nav className="bg-gray-900 text-white px-4 py-3">
   <div className="container mx-auto flex items-center justify-between">
@@ -50,4 +50,6 @@ export default function Navbar(props) {
 
 Navbar.propTypes = {title :PropTypes.string,
                     aboutText: PropTypes.string
-}
+};
+
+export default Navbar;
