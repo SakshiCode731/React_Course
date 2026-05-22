@@ -6,7 +6,9 @@ import Navbar from "./assets/Navbar";
 function App() {
   return (
     <>
-      <Navbar title = {3} aboutText= "About TextUtils" />
+      {/* <Navbar title = {3} aboutText= "About TextUtils" /> */}
+      {/* <Navbar/> */}
+        <Navbar title = "TextUtils"   />
 
       {/* <nav className="bg-gray-800 p-4 text-white">
         <div className="flex gap-4">
