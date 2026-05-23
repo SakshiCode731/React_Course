@@ -1,57 +1,20 @@
 import './App.css'
 import Navbar from "./assets/Navbar";
-
-
+import Textform from './assets/Textform';
 
 function App() {
   return (
     <>
-      {/* <Navbar title = {3} aboutText= "About TextUtils" /> */}
-      {/* <Navbar/> */}
-        <Navbar title = "TextUtils"   />
+      <Navbar title="TextUtils" />
 
-      {/* <nav className="bg-gray-800 p-4 text-white">
-        <div className="flex gap-4">
-          <a href="#">Dashboard</a>
-          <a href="#">Team</a>
-          <a href="#">Projects</a>
-          <a href="#">Calendar</a>
-        </div>
-
-        <div className="mt-4">
-          <button className="rounded bg-blue-500 px-4 py-2">
-            Notification
-          </button>
-        </div>
-
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          className="mt-4 size-6"
-        >
-          <path
-            d="M3.75 6.75h16.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </nav> */}
+      <div className="container mx-auto px-4">
+        <Textform heading="Enter Your Text" />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 
 
 
-// function App() {
-//   return (
-//     <>
-//       <Navbar />
-//     </>
-//   )
-// }
-
-// export default App
