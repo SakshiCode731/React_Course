@@ -7,41 +7,43 @@ function Navbar({ title = "TextUtils", aboutText = "About" }) {
       <div className="container mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold">
+        <a href="#" className="text-2xl font-bold">
           {title}
         </a>
 
         {/* Navigation Links */}
         <ul className="flex gap-6">
           <li>
-            <a href="/" className="hover:text-green-400">
+            <a href="#" className="hover:text-green-400">
               {aboutText}
             </a>
           </li>
 
           <li>
-            <a href="/" className="hover:text-green-400">
-              About us
-              
-            </a>
+           <button className="hover:text-green-400">
+  About us
+</button>
           </li>
         </ul>
 
         {/* Search Form */}
-        <form className="flex gap-2">
-          <input
-            type="search"
-            placeholder="Search"
-            className="rounded-md border border-gray-600 bg-gray-800 px-3 py-2 text-white outline-none focus:border-green-400"
-          />
+        <form
+  className="flex gap-2"
+  onSubmit={(e) => e.preventDefault()}
+>
+  <input
+    type="search"
+    placeholder="Search"
+    className="rounded-md border border-gray-600 bg-gray-800 px-3 py-2 text-white outline-none focus:border-green-400"
+  />
 
-          <button
-            type="submit"
-            className="rounded-md border border-green-500 px-4 py-2 text-green-400 hover:bg-green-500 hover:text-white"
-          >
-            Search
-          </button>
-        </form>
+  <button
+    type="button"
+    className="rounded-md border border-green-500 px-4 py-2 text-green-400 hover:bg-green-500 hover:text-white"
+  >
+    Search
+  </button>
+</form>
 
       </div>
     </nav>
