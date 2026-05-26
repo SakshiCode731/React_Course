@@ -27,7 +27,7 @@ import React from 'react';
             <p className="text-gray-600 leading-7 mb-6">
               We create modern web applications using React,
               Tailwind CSS, and modern technologies.
-              Our mission is to build fast and beautiful websites.
+              Our mission is to build fast and beautiful websites like a real agency.
             </p>
 
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition duration-300">
