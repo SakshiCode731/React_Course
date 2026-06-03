@@ -2,7 +2,7 @@ import React from 'react';
 
  function About() {
   return (
-    <section className="bg-gray-100 py-16">
+    
 
       <div className="max-w-6xl mx-auto px-6">
 
@@ -10,19 +10,15 @@ import React from 'react';
 
           {/* Left Image */}
           <div>
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              alt="About"
-              className="rounded-2xl shadow-lg"
-            />
+          {/* np */} 
           </div>
 
           {/* Right Content */}
           <div>
 
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
               About Us
-            </h2>
+            </h1>
 
             <p className="text-gray-600 leading-7 mb-6">
               We create modern web applications using React,
@@ -34,13 +30,24 @@ import React from 'react';
               Learn More
             </button>
 
+            
+
           </div>
 
         </div>
+        
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg margin top-1.5">
+  Primary Button
+</button>
 
       </div>
+      
+      
+      
 
-    </section>
+    
+    
+    
   );
 }
 
