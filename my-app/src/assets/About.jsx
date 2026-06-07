@@ -1,54 +1,86 @@
-import React from 'react';
+import { useState } from "react";
 
-function About() {
+export default function Accordion() {
+  const [openItem, setOpenItem] = useState(1);
+
+  const toggleAccordion = (item) => {
+    setOpenItem(openItem === item ? null : item);
+  };
+
+ 
+
   return (
+    <>
+    
+     <h1 className="text-2xl font-bold text-blue-500">About Us</h1>
+    <div className="max-w-3xl mx-auto mt-6 border border-gray-300 rounded-lg overflow-hidden">
+      
 
+      {/* Item 1 */}
+      <div className="border-b">
+       
+        <button
+          onClick={() => toggleAccordion(1)}
+          className="w-full px-5 py-4 text-left font-medium bg-gray-100 hover:bg-gray-200 flex justify-between items-center"
+        >
+          Accordion Item #1
+          <span>{openItem === 1 ? "−" : "+"}</span>
+        </button>
 
-    <div className="max-w-6xl mx-auto px-6" styele={myStyle}>
-
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-
-        {/* Left Image */}
-        <div>
-          {/* np */}
-        </div>
-
-        {/* Right Content */}
-        <div>
-
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            About Us
-          </h1>
-
-          <p className="text-gray-600 leading-7 mb-6">
-            We create modern web applications using React,
-            Tailwind CSS, and modern technologies.
-            Our mission is to build fast and beautiful websites like a real agency.
-          </p>
-
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition duration-300">
-            Learn More
-          </button>
-
-
-
-        </div>
-
+        {openItem === 1 && (
+          <div className="p-5 bg-white">
+            <strong>This is the first item’s accordion body.</strong>
+            <p className="mt-2 text-gray-600">
+              It is shown by default until the user collapses it. You can place
+              any content here including text, images, forms, or components.
+            </p>
+          </div>
+        )}
       </div>
 
-      <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-lg">
-        Enable Button
-      </button>
+      {/* Item 2 */}
+      <div className="border-b">
+        <button
+          onClick={() => toggleAccordion(2)}
+          className="w-full px-5 py-4 text-left font-medium bg-gray-100 hover:bg-gray-200 flex justify-between items-center"
+        >
+          Accordion Item #2
+          <span>{openItem === 2 ? "−" : "+"}</span>
+        </button>
+
+        {openItem === 2 && (
+          <div className="p-5 bg-white">
+            <strong>This is the second item’s accordion body.</strong>
+            <p className="mt-2 text-gray-600">
+              It is hidden by default and appears when the button is clicked.
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Item 3 */}
+      <div>
+        <button
+          onClick={() => toggleAccordion(3)}
+          className="w-full px-5 py-4 text-left font-medium bg-gray-100 hover:bg-gray-200 flex justify-between items-center"
+        >
+          Accordion Item #3
+          <span>{openItem === 3 ? "−" : "+"}</span>
+        </button>
+
+        {openItem === 3 && (
+          <div className="p-5 bg-white">
+            <strong>This is the third item’s accordion body.</strong>
+            <p className="mt-2 text-gray-600">
+              This section expands when selected and closes the others.
+            </p>
+          </div>
+        )}
+      </div>
 
     </div>
+  
 
-
-
-
-
-
-
+</>
   );
 }
-
-export default About;
