@@ -9,8 +9,10 @@ function App() {
       <Navbar title="TextUtils" />
 
       <div className="container mx-auto px-4">
-        {/* <Textform heading="Enter Your Text" /> */
-        <About />}
+        {
+         <Textform heading="Enter Your Text" /> 
+        // <About />
+        }
 
       </div>
     </>

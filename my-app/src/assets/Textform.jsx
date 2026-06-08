@@ -13,6 +13,11 @@ export default function Textform(props) {
         setText(newText);
     }
 
+    const handletoCopy = ()=>{
+        let newText = text.toCopy();
+        setText(newText)
+    }
+
     const handleSearch = () => {
         let word = prompt("Enter the word to search");
         if (text.includes(word)) {
@@ -44,6 +49,9 @@ export default function Textform(props) {
                 </button>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handleSearch}>
                     Search Word
+                </button>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handletoCopy}>
+                    Copy Word
                 </button>
             </div>
             <div className="container mx-auto my-3">
