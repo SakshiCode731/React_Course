@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 
 function Navbar({ title = "TextUtils", aboutText = "About" }) {
   return (
-    <nav className="bg-gray-900 text-white px-4 py-3">
+    <nav className={`bg-${props.mode } text-${props.mode} px-4 py-3`}>
       <div className="container mx-auto flex items-center justify-between">
 
         {/* Logo */}
         <a href="#" className="text-2xl font-bold">
-          {title}
+          {props.mode}
         </a>
 
         {/* Navigation Links */}
         <ul className="flex gap-6">
           <li>
             <a href="#" className="hover:text-green-400">
-              {aboutText}
+              {props.aboutText}
             </a>
           </li>
 
