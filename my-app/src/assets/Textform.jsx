@@ -50,9 +50,9 @@ export default function Textform(props) {
                 <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handleSearch}>
                     Search Word
                 </button>
-                {/* <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handletoCopy}>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handletoCopy}>
                     Copy Word
-                </button> */}
+                </button>
             </div>
             <div className="container mx-auto my-3">
                 <h2>Your text summary  </h2>
