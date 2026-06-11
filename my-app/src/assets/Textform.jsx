@@ -13,10 +13,12 @@ export default function Textform(props) {
         setText(newText);
     }
 
-    // const handletoCopy = ()=>{
-    //     let newText = text.toCopy();
-    //     setText(newText)
-    // }
+    const handletoCopy = ()=>{
+        let newText = document.getElementById("myBox");
+        text.select();
+        // text.setSelectionRange(0,9999);
+        navigator.clipboard.writeText(text.value);
+    }
 
     const handleSearch = () => {
         let word = prompt("Enter the word to search");
@@ -25,6 +27,11 @@ export default function Textform(props) {
         } else {
             alert("The word is not present in the text");
         }
+    }
+
+    const handleExtraSpaces =() =>{
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
     }
 
     const handleOnChange = (event) => {
@@ -50,8 +57,11 @@ export default function Textform(props) {
                 <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handleSearch}>
                     Search Word
                 </button>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handletoCopy}>
+                <button className="bg-blue-500 text-white px-4 py-2 mt-2 ml-2 rounded" onClick={handletoCopy}>
                     Copy Word
+                </button>
+                <button className="bg-blue-500 text-white px-4 py-2 mt-2 ml-2 rounded" onClick={handleExtraSpaces}>
+                    Handle Space
                 </button>
             </div>
             <div className="container mx-auto my-3">
