@@ -5,12 +5,14 @@ export default function Textform(props) {
         // console.log("Uppercase was clicked");
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to uppercase!", "success");
     }
 
     const handleLoClick = () => {
         // console.log("Lowercase was clicked");
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to lowercase!", "success");
     }
 
     const handletoCopy = ()=>{
@@ -18,6 +20,7 @@ export default function Textform(props) {
         text.select();
         // text.setSelectionRange(0,9999);
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text Copied to clipboard!", "success");
     }
 
     const handleSearch = () => {
@@ -27,11 +30,13 @@ export default function Textform(props) {
         } else {
             alert("The word is not present in the text");
         }
+        props.showAlert("Searched for the word!", "success");
     }
 
     const handleExtraSpaces =() =>{
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
+        props.showAlert("Extra spaces removed!", "success");
     }
 
     const handleOnChange = (event) => {
