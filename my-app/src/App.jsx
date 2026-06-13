@@ -5,23 +5,23 @@ import Navbar from "./assets/Navbar";
 import Textform from './assets/Textform';
 import About from './assets/About';
 import Alert from './assets/Alert';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 function App() {
   const [mode, setmode] = useState('light'); //weather dark mode is enable or not
   const [alert, setAlert] = useState(null);
 
-const showAlert = (message, type) => {
-  setAlert({
-    msg: message,
-    type: type
-  })
-  setTimeout(() => {
-    setAlert(null);
-  }, 1500);
-}
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type
+    })
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
+  }
 
-   const toggleMode = () => {
+  const toggleMode = () => {
     if (mode === 'light') {
       setmode('dark');
       document.body.style.backgroundColor = '#042743';
@@ -43,14 +43,15 @@ const showAlert = (message, type) => {
   return (
     <>
       <Navbar title="TextUtils" mode={mode}
-      toggleMode={toggleMode}/>
+        toggleMode={toggleMode} />
       <Alert alert={alert} />
 
       <div className="container mx-auto px-4">
-        {
-         <Textform  showAlert={showAlert} mode={mode} /> 
-        // <About />
-        }
+        
+         {/* <Textform  showAlert={showAlert} mode={mode} />  */}
+        
+        <About />
+        
 
       </div>
     </>
