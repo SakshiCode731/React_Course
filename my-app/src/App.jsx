@@ -6,6 +6,8 @@ import Textform from './assets/Textform';
 import About from './assets/About';
 import Alert from './assets/Alert';
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route }
+ from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState('light'); //weather dark mode is enable or not
