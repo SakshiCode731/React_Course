@@ -48,9 +48,9 @@ function App() {
 
       <div className="container mx-auto px-4">
         
-         {/* <Textform  showAlert={showAlert} mode={mode} />  */}
+         <Textform  showAlert={showAlert} mode={mode} /> 
         
-        <About />
+        {/* <About /> */}
         
 
       </div>
