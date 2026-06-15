@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
  const isDark = props.mode === 'dark';
@@ -10,22 +11,22 @@ function Navbar(props) {
       <div className="container mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold">
+        <Link to="#" className="text-2xl font-bold">
           {props.title}
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="flex gap-6">
           <li>
-            <a href="#" className="hover:text-green-400">
+            <Link to="#" className="hover:text-green-400">
               {props.aboutText}
-            </a>
+            </Link>
           </li>
 
           <li>
-            <button className="hover:text-green-400">
+            <Link to="/about" className="hover:text-green-400">
               About us
-            </button>
+            </Link>
           </li>
         </ul>
 

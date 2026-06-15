@@ -49,8 +49,12 @@ function App() {
       <Alert alert={alert} />
 
       <div className="container mx-auto px-4">
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Textform showAlert={showAlert} mode={mode} />} />
+      </Routes>
         
-         <Textform  showAlert={showAlert} mode={mode} /> 
+         
         
         {/* <About /> */}
         
