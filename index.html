@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="#favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Textutils is a utility which can be used to manipulate your text in the way you want" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL/32329.png" />
+    <link rel="manifest" href="/manifest.json">
+    <title>TextUtils - Home</title>
+    <script type="module" crossorigin src="/React_Course/assets/index-CLoUVQWc.js"></script>
+    <link rel="stylesheet" crossorigin href="/React_Course/assets/index-BAphdCvV.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script >
+     let a = 1;
+     console.log(a);
+     console.log("from html script");
+    //  Numbers 
+    //  Objects
+    //  Booleans - true or false
+    //  String
+    //  undefined
+    //   null
+
+    "use strict";
+    let  b = 45;
+    b = 4554 + 4;
+    console.log(b);
+    function hello(){
+      console.log("Hello Sakshi");
+    }
+    let obja = {
+      r: 34,
+      m:45,
+      // func: function myfunc(number){
+      //   console.log("The number is " + number); 
+
+      // }
+    
+    }
+
+    document.addEventListener("click", function click(){
+      console.log("Clicked");
+      // let conf = confirm("Are you sure?");
+      console.log(conf);
+    })
+
+    // for (let index = 0; index < 5; index++) {
+    //   console.log(index);
+    // }
+
+    let arr = [1, 2, 3, 4, 5];
+    console.log(this);
+    //  function myfunc(number){dd
+    //     console.log("The number is " + this); 
+
+    //   }
+    let mobj = {
+      a:this,
+      myfunc:function (number){
+        console.log(this);
+      }
+      // console.log("The number is " + this);
+    }
+      mobj.myfunc();
+      console.log(mobj.a);
+      setTimeout(() => {
+        console.log("yayaaa")
+      }, 3000);
+      console.log("This will run before the timeout");
+    </script>
+    <!-- <h1> Hello World  </h1> -->
+  </body>
+</html>
