@@ -3,7 +3,7 @@
 import './App.css'
 import Navbar from "./assets/Navbar";
 import Textform from './assets/Textform';
-// import About from './assets/About';
+import About from './assets/About';
 import Alert from './assets/Alert';
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route }
@@ -49,16 +49,25 @@ function App() {
       <Alert alert={alert} />
 
       <div className="container mx-auto px-4">
-      {/* <Routes>
-        {/* /users---> Component 1
+       <Routes>
+        {/* {/* /* /users---> Component 1
         /users/home---> --> Component 2
-        /users/home/1---> Component 3 */}
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/" element={<Textform showAlert={showAlert} mode={mode} />} />
-      </Routes> */ }
+        /users/home/1---> Component 3 */  }
+
+         <Route path="/about" element={<About />} />
+        <Route 
+            path="/" 
+            element={
+              <Textform 
+                showAlert={showAlert} 
+                mode={mode} 
+              />
+            } 
+          />
+      </Routes>  
         
          
-        <Textform showAlert={showAlert} mode={mode}/>
+        {/* <Textform showAlert={showAlert} mode={mode}/> */}
         {/* <About /> */}
         
 

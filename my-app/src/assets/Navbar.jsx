@@ -11,22 +11,22 @@ function Navbar(props) {
       <div className="container mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#" className="text-2xl font-bold">
+        <Link to="/" className="text-2xl font-bold">
           {props.title}
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <ul className="flex gap-6">
           <li>
-            <a href="#" className="hover:text-green-400">
+            <Link to="/about" className="hover:text-green-400">
               {props.aboutText}
-            </a>
+            </Link>
           </li>
 
           <li>
-            {/* <a href="/about" className="hover:text-green-400">
+            <Link to="/about" className="hover:text-green-400">
               About us
-            </a> */}
+            </Link>
           </li>
         </ul>
 
