@@ -34,7 +34,7 @@ export default function Accordion() {
                 : "bg-gray-100 text-black hover:bg-gray-200"
               }`}
           >
-            Accordion Item #1
+            Analyze Your Text
             <span>{openItem === 1 ? "−" : "+"}</span>
           </button>
 
@@ -97,12 +97,12 @@ export default function Accordion() {
 
       </div>
 
-      <button
+      {/* <button
         onClick={toggleDarkMode}
         className="bg-blue-500 text-white rounded mt-4 px-4 py-2"
       >
         {darkMode ? "Enable Light Mode" : "Enable Dark Mode"}
-      </button>
+      </button> */}
     </>
   );
 }

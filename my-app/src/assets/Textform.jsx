@@ -53,13 +53,13 @@ export default function Textform(props) {
                 <div className="mb-3">
                     <textarea className="w-full border border-gray-400 rounded p-2" id="myBox" value={text} onChange={handleOnChange} rows="8" style={{backgroundColor:props.mode==='dark'?'gray':'white', color:props.mode==='dark'?'white':'black'}}></textarea>
                 </div>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2" onClick={handleUpClick}>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 my-2" onClick={handleUpClick}>
                     Convert to Uppercase
                 </button>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2" onClick={handleLoClick}>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 my-2" onClick={handleLoClick}>
                     Convert to Lowercase
                 </button>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={handleSearch}>
+                <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 my-2" onClick={handleSearch}>
                     Search Word
                 </button>
                 <button className="bg-blue-500 text-white px-4 py-2 mt-2 ml-2 rounded" onClick={handletoCopy}>
