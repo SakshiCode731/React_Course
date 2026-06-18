@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Accordion() {
+export default function Accordion(props) {
   const [darkMode, setDarkMode] = useState(false);
   const [openItem, setOpenItem] = useState(1);
 
@@ -12,14 +12,20 @@ export default function Accordion() {
     setOpenItem(openItem === item ? null : item);
   };
 
+  let myStyle = {
+    color: props.mode === 'dark' ? 'white' : '#042743',
+    backgroundColor: props.mode === 'dark' ? '#042743' : 'white'
+  };
+
+
   return (
     <>
 
-      <h1 className="text-2xl font-bold text-blue-500">About Us</h1>
-      <div
+      <h1 className="text-2xl font-bold text-blue-500" >About Us</h1>
+      <div style={myStyle}
         className={`max-w-3xl mx-auto mt-6 border rounded-lg overflow-hidden ${darkMode
-            ? "bg-black text-white border-gray-700"
-            : "bg-white text-black border-gray-300"
+          ? "bg-black text-white border-gray-700"
+          : "bg-white text-black border-gray-300"
           }`}
       >
 
@@ -29,21 +35,25 @@ export default function Accordion() {
 
           <button
             onClick={() => toggleAccordion(1)}
-            className={`w-full px-5 py-4 text-left font-medium flex justify-between items-center ${darkMode
-                ? "bg-gray-800 text-white hover:bg-gray-700"
-                : "bg-gray-100 text-black hover:bg-gray-200"
+            className={`w-full px-5 py-4 text-left font-medium flex justify-between items-center
+  ${props.mode === "dark"
+                ? "bg-[#042743] text-white hover:bg-[#06385c]"
+                : "bg-gray-100 text-black"
               }`}
           >
-            Analyze Your Text
+            <strong>Analyze Your Text</strong>
             <span>{openItem === 1 ? "−" : "+"}</span>
           </button>
 
           {openItem === 1 && (
-            <div className="p-5">
-              <strong >This is the first item’s accordion body.</strong>
+            <div
+              className={`p-5 ${props.mode === "dark"
+                  ? "bg-[#24506f] text-white"
+                  : "bg-white text-black"
+                }`}
+            >
               <p className="mt-2">
-                It is shown by default until the user collapses it. You can place
-                any content here including text, images, forms, or components.
+                TextUtils gives you a way to analyze your text quickly and efficiently. Be it word count, character count or
               </p>
             </div>
           )}
@@ -53,20 +63,27 @@ export default function Accordion() {
         <div className="border-b">
           <button
             onClick={() => toggleAccordion(2)}
-            className={`w-full px-5 py-4 text-left font-medium flex justify-between items-center ${darkMode
-                ? "bg-gray-800 text-white hover:bg-gray-700"
-                : "bg-gray-100 text-black hover:bg-gray-200"
+            className={`w-full px-5 py-4 text-left font-medium flex justify-between items-center
+  ${props.mode === "dark"
+                ? "bg-[#042743] text-white hover:bg-[#06385c]"
+                : "bg-gray-100 text-black"
               }`}
           >
-            Accordion Item #2
+            <strong>free to use</strong>
             <span>{openItem === 2 ? "−" : "+"}</span>
           </button>
 
           {openItem === 2 && (
-            <div className="p-5">
-              <strong>This is the second item’s accordion body.</strong>
+            <div
+              className={`p-5 ${props.mode === "dark"
+                  ? "bg-[#24506f] text-white"
+                  : "bg-white text-black"
+                }`}
+            >
               <p className="mt-2">
-                It is hidden by default and appears when the button is clicked.
+                TextUtils is a free character counter tool that provides instant character count & word count
+                statistics for a given text. TextUtils reports the number of words and characters.
+                Thus it is suitable for writing text with word/ character limit.
               </p>
             </div>
           )}
@@ -76,20 +93,26 @@ export default function Accordion() {
         <div>
           <button
             onClick={() => toggleAccordion(3)}
-            className={`w-full px-5 py-4 text-left font-medium flex justify-between items-center ${darkMode
-                ? "bg-gray-800 text-white hover:bg-gray-700"
-                : "bg-gray-100 text-black hover:bg-gray-200"
+            className={`w-full px-5 py-4 text-left font-medium flex justify-between items-center
+  ${props.mode === "dark"
+                ? "bg-[#042743] text-white hover:bg-[#06385c]"
+                : "bg-gray-100 text-black"
               }`}
           >
-            Accordion Item #3
+            <strong>Browser Compatible</strong>
             <span>{openItem === 3 ? "−" : "+"}</span>
           </button>
 
           {openItem === 3 && (
-            <div className="p-5">
-              <strong>This is the third item’s accordion body.</strong>
+            <div
+              className={`p-5 ${props.mode === "dark"
+                  ? "bg-[#24506f] text-white"
+                  : "bg-white text-black"
+                }`}
+            >
               <p className="mt-2">
-                This section expands when selected and closes the others.
+                This word counter software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera.
+                It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.
               </p>
             </div>
           )}

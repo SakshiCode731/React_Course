@@ -54,15 +54,22 @@ function App() {
         /users/home---> --> Component 2
         /users/home/1---> Component 3 */  }
 
-         <Route path="/about" element={<About />} />
+         
         <Route 
+           
             path="/" 
             element={
               <Textform 
-                showAlert={showAlert} 
+                showAlert={showAlert} heading="TextUtils - Word Counter, Character Counter, Remove extra spaces"
                 mode={mode} 
               />
             } 
+          />
+          <Route 
+            path="/about" 
+            element={
+              <About mode={mode}/>
+            }
           />
       </Routes>  
         

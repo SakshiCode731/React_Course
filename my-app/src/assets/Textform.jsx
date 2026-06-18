@@ -49,9 +49,9 @@ export default function Textform(props) {
     return (
         <>
             <div className="container mx-auto" style={{color:props.mode==='dark'?'white':'black'}}>
-                <h1>{props.heading}</h1>
+                <h1 className='mb-4'>{props.heading}</h1>
                 <div className="mb-3">
-                    <textarea className="w-full border border-gray-400 rounded p-2" id="myBox" value={text} onChange={handleOnChange} rows="8" style={{backgroundColor:props.mode==='dark'?'gray':'white', color:props.mode==='dark'?'white':'black'}}></textarea>
+                    <textarea className="w-full border border-gray-400 rounded p-2" id="myBox" value={text} onChange={handleOnChange} rows="8" style={{backgroundColor:props.mode==='dark'?'#13466e':'white', color:props.mode==='dark'?'white':'#042743'}}></textarea>
                 </div>
                 <button className="bg-blue-500 text-white px-4 py-2 rounded mx-2 my-2" onClick={handleUpClick}>
                     Convert to Uppercase
