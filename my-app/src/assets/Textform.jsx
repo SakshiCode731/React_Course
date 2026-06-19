@@ -17,9 +17,10 @@ export default function Textform(props) {
 
     const handletoCopy = ()=>{
         let newText = document.getElementById("myBox");
-        text.select();
+        newText.select();
         // text.setSelectionRange(0,9999);
-        navigator.clipboard.writeText(text.value);
+        navigator.clipboard.writeText(newText.value);
+        document.getSelection().removeAllRanges();
         props.showAlert("Text Copied to clipboard!", "success");
     }
 
